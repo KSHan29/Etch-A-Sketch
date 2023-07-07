@@ -1,21 +1,17 @@
 let gridSize = 10;
-const gridWidth = document.querySelector(".grids").clientWidth / 16;
-console.log(gridWidth);
+const cellWidth = document.querySelector(".grid").clientWidth / 16;
+
 function init() {
-  let grids = document.querySelector(".grids");
+  let grid = document.querySelector(".grid");
   for (let i = 0; i < gridSize; i++) {
     let row = document.createElement("div");
-    row.classList.add("grids-row");
+    row.classList.add("grid-row");
     for (let j = 0; j < gridSize; j++) {
-      let grid = document.createElement("div");
-      grid.classList.add("grid");
-      //   grid.style.width = gridWidth;
-      //   grid.style.height = gridWidth;
-      //   cell.style.width =
-      //   grid.textContent = `${i} ${j}`;
-      row.appendChild(grid);
+      let cell = document.createElement("div");
+      cell.classList.add("cell");
+      row.appendChild(cell);
     }
-    grids.appendChild(row);
+    grid.appendChild(row);
   }
 }
 
