@@ -15,13 +15,13 @@ body {
 }
 
 .header-title {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 900;
   padding: 20px;
 }
 
 .grid {
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
   width: 500px;
   height: 500px;
   margin: 20px;
@@ -38,7 +38,7 @@ body {
 }
 
 .cell {
-  background-color: white;
+  background-color: #ffffff;
   flex: 1;
 }
 
@@ -48,14 +48,25 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  width: 200px;
+  width: 240px;
 }
 
 .control-button {
   border-radius: 8px;
   border: 2px solid black;
   width: 90%;
-  height: 45px;
+  height: 40px;
+  font-family: cursive;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.colour-text {
+  margin-right: 10px;
 }
 
 .grid-size {
@@ -63,5 +74,24 @@ body {
   margin: 0;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 7px;
+  border-radius: 5px;
+  background-image: linear-gradient(#2586c2, #2586c2);
+  background-size: 100% 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #2586c2;
+  box-shadow: 0 0 2px 0 #555;
+}
+
 .grid-size-display {
+  font-size: 20px;
 }

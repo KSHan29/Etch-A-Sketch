@@ -15,14 +15,24 @@
       </div>
       <div class="container-body">
         <div class="controls">
-          <button class="set-colour control-button">Colour</button>
-          <button class="set-background control-button">
-            Background Colour
+          <button class="set-colour control-button">
+            <span class="colour-text">Colour:</span>
+            <input type="color" class="colour-picker colour" value="#87cfeb" />
           </button>
+          <button class="set-background control-button">
+            <span class="colour-text">Background Colour:</span>
+            <input
+              type="color"
+              class="colour-picker background-colour"
+              value="#ffffff"
+            />
+          </button>
+          <button class="rainbow control-button">Rainbow</button>
+          <button class="gradient control-button">Gradient</button>
           <button class="eraser control-button">Eraser</button>
           <button class="clear control-button">Clear</button>
           <input type="range" class="grid-size" value="16" min="4" max="64" />
-          <div class="grid-size-display">Grid Size: 16</div>
+          <div class="grid-size-display">Grid Size: 16 x 16</div>
         </div>
         <div class="grid"></div>
       </div>
