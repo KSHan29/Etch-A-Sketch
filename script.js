@@ -42,9 +42,14 @@ function changeBackgroundColour(e) {
   setGridColour();
 }
 
+function changeCellColour(cell) {
+  cell.style.background = backgroundColour;
+  cell.style.filter = "";
+}
+
 function setGridColour() {
   let cells = document.querySelectorAll(".cell");
-  cells.forEach((cell) => (cell.style.background = backgroundColour));
+  cells.forEach(changeCellColour);
 }
 
 function toggleOff() {
