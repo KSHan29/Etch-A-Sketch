@@ -3,15 +3,15 @@ const cellWidth = document.querySelector(".grid").clientWidth / 16;
 let colour = "#87cfeb";
 let backgroundColour = "white";
 
-/* rainbow, gradient, eraser */
+/* rainbow, darken, eraser */
 let toggleOn = [false, false, false];
-let toggleOnSelector = [".rainbow", ".gradient", ".eraser"];
+let toggleOnSelector = [".rainbow", ".darken", ".eraser"];
 const rainbowOn = 0;
-const gradientOn = 1;
+const darkenOn = 1;
 const eraserOn = 2;
 
 function colourCell(e) {
-  if (toggleOn[gradientOn]) {
+  if (toggleOn[darkenOn]) {
     const brightness = e.target.style.filter;
     if (brightness == "") {
       e.target.style.filter = "brightness(90%)";
@@ -73,16 +73,16 @@ function toggleRainbow() {
   }
 }
 
-function toggleGradient() {
-  const gradient = document.querySelector(".gradient");
-  if (!toggleOn[gradientOn]) {
+function toggleDarken() {
+  const darken = document.querySelector(".darken");
+  if (!toggleOn[darkenOn]) {
     toggleOff();
-    const gradientShadow = "0 0 10px 2px rgb(11, 119, 162)";
-    gradient.style["box-shadow"] = gradientShadow;
-    toggleOn[gradientOn] = true;
+    const darkenShadow = "0 0 10px 2px rgb(11, 119, 162)";
+    darken.style["box-shadow"] = darkenShadow;
+    toggleOn[darkenOn] = true;
   } else {
-    gradient.style["box-shadow"] = "";
-    toggleOn[gradientOn] = false;
+    darken.style["box-shadow"] = "";
+    toggleOn[darkenOn] = false;
   }
 }
 
@@ -112,14 +112,14 @@ function addListeners() {
   let colourClass = document.querySelector(".colour");
   let backgroundClass = document.querySelector(".background-colour");
   let rainbow = document.querySelector(".rainbow");
-  let gradient = document.querySelector(".gradient");
+  let darken = document.querySelector(".darken");
   let eraser = document.querySelector(".eraser");
   let clear = document.querySelector(".clear");
   let gridSizeControl = document.querySelector(".grid-size");
   colourClass.addEventListener("input", changeColour);
   backgroundClass.addEventListener("input", changeBackgroundColour);
   rainbow.addEventListener("click", toggleRainbow);
-  gradient.addEventListener("click", toggleGradient);
+  darken.addEventListener("click", toggleDarken);
   eraser.addEventListener("click", toggleEraser);
   clear.addEventListener("click", setGridColour);
   gridSizeControl.addEventListener("input", changeGridSize);
