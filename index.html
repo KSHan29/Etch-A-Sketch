@@ -13,7 +13,19 @@
       <div class="header">
         <div class="header-title">Etch A Sketch</div>
       </div>
-      <div class="grid"></div>
+      <div class="container-body">
+        <div class="controls">
+          <button class="set-colour control-button">Colour</button>
+          <button class="set-background control-button">
+            Background Colour
+          </button>
+          <button class="eraser control-button">Eraser</button>
+          <button class="clear control-button">Clear</button>
+          <input type="range" class="grid-size" value="16" min="4" max="64" />
+          <div class="grid-size-display">Grid Size: 16</div>
+        </div>
+        <div class="grid"></div>
+      </div>
     </div>
   </body>
 </html>
